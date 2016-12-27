@@ -80,10 +80,6 @@ class UserButtons extends React.Component {
     if (currentUser === null) {
       return (
         <div className="user-buttons">
-          <div className="become-a-host">
-            <Link to="/become-a-host" className="become-a-host-link">Become a Host</Link>
-          </div>
-
           <button className="user-button-new" onClick={this.showSignupModal}>Signup</button>
           <Modal
             className="user-modal"
@@ -105,37 +101,9 @@ class UserButtons extends React.Component {
         </div>
       );
     }
-    else if (currentUser && currentUser.is_host === false) {
-      return (
-        <div className="user-buttons">
-          <div className="become-a-host">
-            <Link to="/become-a-host" className="become-a-host-link">Become a Host</Link>
-          </div>
-          <Link className="user-button user-button-trips" to="/my-trips">Trips</Link>
-          <Dropdown ref="userDropdown">
-            <div onMouseEnter={this.openDropdown} onMouseLeave={this.closeDropdown}>
-              <button className="user-button-logout" to="/">
-                <span className="top-bar-user-name">{currentUser.first_name}</span>
-                <img src={currentUser.image_url} className="top-bar-user-image"/>
-              </button>
-            </div>
-            <DropdownContent onMouseEnter={this.openDropdown} onMouseLeave={this.closeDropdown}>
-              <Link to="/" className="top-bar-dropdown-element tbd-one">Edit profile (coming soon)</Link>
-              <span className="tbd-border"></span>
-              <span className="top-bar-dropdown-element tbd-two" onClick={this.props.logout}>Log out</span>
-            </DropdownContent>
-          </Dropdown>
-        </div>
-      );
-    }
     else {
       return (
         <div className="user-buttons">
-          <div className="add-a-listing">
-            <Link to="/become-a-host" className="become-a-host-link">Add a listing</Link>
-          </div>
-          <Link className="user-button user-button-host" to="/my-listings">Host</Link>
-          <Link className="user-button user-button-trips" to="/my-trips">Trips</Link>
           <Dropdown ref="userDropdown">
             <div onMouseEnter={this.openDropdown} onMouseLeave={this.closeDropdown}>
               <button className="user-button-logout" to="/">

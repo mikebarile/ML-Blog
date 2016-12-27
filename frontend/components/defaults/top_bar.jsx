@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
 import { withRouter } from 'react-router';
-import SearchBar from './search_bar';
 import UserButtons from './user_buttons';
 
 const TopBar = ({router, currentUser, logout, clearErrors}) => {
@@ -14,11 +13,9 @@ const TopBar = ({router, currentUser, logout, clearErrors}) => {
     <div className={"top-bar"}>
       <img
         onClick={redirectToHome}
-        src="https://res.cloudinary.com/dsguwnfdw/image/upload/v1478131430/logo/hairbnb_b3t3pl.png"
+        src="https://res.cloudinary.com/dsguwnfdw/image/upload/v1482869074/ml-logo-220x220_oihs1a.png"
         className={"logo"}
       />
-
-      <SearchBar/>
       <UserButtons currentUser={currentUser} logout={logout} clearErrors={clearErrors}/>
     </div>
   );
