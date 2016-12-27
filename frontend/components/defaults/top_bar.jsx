@@ -13,7 +13,7 @@ const TopBar = ({router, currentUser, logout, clearErrors}) => {
     <div className={"top-bar"}>
       <img
         onClick={redirectToHome}
-        src="https://res.cloudinary.com/dsguwnfdw/image/upload/v1482869074/ml-logo-220x220_oihs1a.png"
+        src="https://res.cloudinary.com/dsguwnfdw/image/upload/v1482872640/Screen_Shot_2016-12-27_at_4.01.34_PM_bbjqzs.png"
         className={"logo"}
       />
       <UserButtons currentUser={currentUser} logout={logout} clearErrors={clearErrors}/>

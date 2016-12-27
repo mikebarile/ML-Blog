@@ -80,7 +80,7 @@ class UserButtons extends React.Component {
     if (currentUser === null) {
       return (
         <div className="user-buttons">
-          <button className="user-button-new" onClick={this.showSignupModal}>Signup</button>
+          <button className="user-button-new" onClick={this.showSignupModal}>SIGNUP</button>
           <Modal
             className="user-modal"
             ref="signupModal"
@@ -89,7 +89,7 @@ class UserButtons extends React.Component {
             <SignupForm hideSignupModal={this.hideSignupModal} switch={this.setSwitch}/>
           </Modal>
 
-          <button className="user-button-new" onClick={this.showLoginModal}>Login</button>
+          <button className="user-button-new" onClick={this.showLoginModal}>LOGIN</button>
           <Modal
             lassName="user-modal"
             ref="loginModal"
