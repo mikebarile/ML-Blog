@@ -18,6 +18,8 @@ const Root = ({ store }) => {
   <Provider store={store}>
     <Router history={hashHistory} onUpdate={() => window.scrollTo(0, 0)}>
       <Route path="/" component={App} >
+        <IndexRedirect to="/home" />
+        <Route path="/home" component={HomeContainer}/>
       </Route>
     </Router>
   </Provider>
