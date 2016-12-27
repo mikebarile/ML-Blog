@@ -13,9 +13,15 @@ class Home extends React.Component {
   render() {
     return(
       <div className="home">
-        <span>HELLO WORLD</span>
-      </div>
+        <div className="blog-header">
+          <span className="blog-headline">the answers to all your questions</span>
+          <span className="blog-headline">(ok, some of your questions)</span>
+        </div>
 
+        <div className="blog-list">
+          
+        </div>
+      </div>
     );
   }
 }

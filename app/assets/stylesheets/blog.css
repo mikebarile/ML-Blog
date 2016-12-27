@@ -1,0 +1,13 @@
+.blog-header {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #D4A8AC;
+  color: white;
+  font-family: futura-pt;
+  font-size: 80px;
+  letter-spacing: 3px;
+}
