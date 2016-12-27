@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+
+ @font-face {
+   font-family: pretty-font;
+   src: url('https://res.cloudinary.com/dsguwnfdw/raw/upload/v1478195629/Gifs/prima_sans.ttf');
+ }
+
+@font-face {
+  font-family: pretty-font-bold;
+  src: url('https://res.cloudinary.com/dsguwnfdw/raw/upload/v1478195629/Gifs/prima_sans_bold.ttf');
+}
