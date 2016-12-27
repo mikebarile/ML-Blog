@@ -1,0 +1,23 @@
+{
+  "name": "mlBlogger",
+  "version": "1.0.0",
+  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "main": "webpack.config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikebarile/ML-Blogger.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikebarile/ML-Blogger/issues"
+  },
+  "homepage": "https://github.com/mikebarile/ML-Blogger#readme"
+}
