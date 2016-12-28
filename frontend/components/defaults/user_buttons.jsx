@@ -107,14 +107,11 @@ class UserButtons extends React.Component {
           <Dropdown ref="userDropdown">
             <div onMouseEnter={this.openDropdown} onMouseLeave={this.closeDropdown}>
               <button className="user-button-logout" to="/">
-                <span className="top-bar-user-name">{currentUser.first_name}</span>
-                <img src={currentUser.image_url} className="top-bar-user-image"/>
+                <span className="top-bar-user-name">{currentUser.first_name.toUpperCase()}</span>
               </button>
             </div>
             <DropdownContent onMouseEnter={this.openDropdown} onMouseLeave={this.closeDropdown}>
-              <Link to="/" className="top-bar-dropdown-element tbd-one">Edit profile (coming soon)</Link>
-              <span className="tbd-border"></span>
-              <span className="top-bar-dropdown-element tbd-two" onClick={this.props.logout}>Log out</span>
+              <span className="top-bar-dropdown-element tbd-one" onClick={this.props.logout}>LOG OUT</span>
             </DropdownContent>
           </Dropdown>
         </div>
