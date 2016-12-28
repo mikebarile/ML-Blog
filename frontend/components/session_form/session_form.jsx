@@ -45,7 +45,7 @@ class SessionForm extends React.Component {
 
   handleGuestSubmit(e) {
     e.preventDefault();
-    this.props.processForm({user: {email: "mikebarile13@gmail.com", password: "password"}});
+    this.props.processForm({user: {email: "rony@magicleap.com", password: "password"}});
   }
 
   render() {
