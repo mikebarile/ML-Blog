@@ -35,7 +35,7 @@ export default ({ getState, dispatch }) => next => action => {
       fetchPost(action.id, receivePostSuccess, errorCallback);
       return next(action);
     case FETCH_POSTS:
-      fetchPosts(action.params, receivePostsSuccess);
+      fetchPosts(receivePostsSuccess);
       return next(action);
     case CREATE_POST:
       createPost(action.post, receiveNewPostSuccess);

@@ -8,20 +8,10 @@ class User < ActiveRecord::Base
   has_many :links
   has_many :comments
 
-  has_many :listings,
+  has_many :posts,
   primary_key: :id,
-  foreign_key: :host_id,
-  class_name: :Listing
-
-  has_many :reservations,
-  primary_key: :id,
-  foreign_key: :host_id,
-  class_name: :Booking
-
-  has_many :trips,
-  primary_key: :id,
-  foreign_key: :guest_id,
-  class_name: :Booking
+  foreign_key: :user_id,
+  class_name: :Post
 
   after_initialize :ensure_session_token
 

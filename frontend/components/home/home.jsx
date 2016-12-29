@@ -3,11 +3,15 @@ import { Link } from 'react-router';
 
 class Home extends React.Component {
   constructor(props) {
-      super(props);
+    super(props);
   }
 
   componentWillMount() {
+    this.props.fetchPosts();
+  }
 
+  componentDidUpdate() {
+    console.log(this.props);
   }
 
   render() {
@@ -19,7 +23,7 @@ class Home extends React.Component {
         </div>
 
         <div className="blog-list">
-          
+
         </div>
       </div>
     );

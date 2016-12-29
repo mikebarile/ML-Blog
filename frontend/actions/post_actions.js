@@ -19,6 +19,10 @@ export const fetchPost = (id) => ({
   id
 });
 
+export const fetchPosts = () => ({
+  type: FETCH_POSTS,
+});
+
 export const createPost = (post, router) => ({
   type: CREATE_POST,
   post,

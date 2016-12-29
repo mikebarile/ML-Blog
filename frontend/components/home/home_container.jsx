@@ -1,13 +1,14 @@
 import { connect } from 'react-redux';
 import Home from './home';
+import { fetchPosts } from '../../actions/post_actions';
 
-const mapStateToProps = ({session, topPicks}) => ({
+const mapStateToProps = ({session, allPosts}) => ({
   currentUser: session.currentUser,
-  topPicks
+  allPosts
 });
 
 const mapDispatchToProps = dispatch => ({
-  
+  fetchPosts: () => dispatch(fetchPosts())
 });
 
 export default connect(

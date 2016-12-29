@@ -1,7 +1,6 @@
 import {RECEIVE_POST, REMOVE_POST, RECEIVE_POST_ERRORS,
   CLEAR_POST_ERRORS, CLEAR_POST, CLEAR_STATE
 } from '../actions/post_actions';
-import {RECEIVE_NEW_REVIEW} from '../actions/review_actions';
 import { merge } from 'lodash';
 
 const defaultState = {

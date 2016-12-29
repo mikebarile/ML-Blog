@@ -7,11 +7,10 @@ export const fetchPost = (id, success, error) => {
   });
 };
 
-export const fetchPosts = (params, success, error) => {
+export const fetchPosts = (success, error) => {
   $.ajax({
     method: 'GET',
     url: `api/posts`,
-    data: {"post": params},
     success,
     error
   });
