@@ -4,7 +4,7 @@ export const CREATE_POST = "CREATE_POST";
 export const DELETE_POST = "DELETE_POST";
 export const EDIT_POST = "EDIT_POST";
 export const RECEIVE_POST = "RECEIVE_POST";
-export const RECEIVE_MY_POSTS = "RECEIVE_MY_POSTS";
+export const RECEIVE_POSTS = "RECEIVE_POSTS";
 export const RECEIVE_NEW_POST = "RECEIVE_NEW_POST";
 export const REMOVE_POST = "REMOVE_POST";
 export const RECEIVE_POST_ERRORS = "RECEIVE_POST_ERRORS";
@@ -44,8 +44,8 @@ export const receivePost = (post) => ({
   post
 });
 
-export const receiveMyPosts = (posts) => ({
-  type: RECEIVE_MY_POSTS,
+export const receivePosts = (posts) => ({
+  type: RECEIVE_POSTS,
   posts
 });
 
