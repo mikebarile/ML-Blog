@@ -23,7 +23,7 @@
 
 .post-item {
   display: flex;
-  padding-bottom: 100px;
+  padding-bottom: 90px;
 }
 
 .pi-date-col {
@@ -90,4 +90,23 @@
   padding-top: 10px;
   font-size: 21px;
   white-space: pre-wrap;
+}
+
+.pi-read-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #CCCCCC;
+  color: #CCCCCC;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-family: futura-pt;
+  width: 125px;
+  height: 30px;
+  margin-top: 20px;
+}
+
+.pi-read-more:hover {
+  background: #AAAAAA;
+  color: white;
 }
