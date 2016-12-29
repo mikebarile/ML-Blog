@@ -20,8 +20,8 @@ class PostItem extends React.Component {
 
     else {
       let date = post.created_at;
-      let months = [ "January", "February", "March", "April", "May", "June",
-      "July", "August", "September", "October", "November", "December" ];
+      let months = [ "jan", "feb", "mar", "apr", "may", "june",
+      "july", "aug", "sep", "oct", "nov", "dec" ];
       let day = date.substring(8, 10);
       let year = date.substring(0, 4);
       let month = months[parseInt(date.substring(5, 7), 10)-1];

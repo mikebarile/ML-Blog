@@ -11,3 +11,83 @@
   font-size: 80px;
   letter-spacing: 3px;
 }
+
+.blog-list {
+  font-family: futura-pt;
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 85px;
+  margin-right: 100px;
+}
+
+.post-item {
+  display: flex;
+  padding-bottom: 100px;
+}
+
+.pi-date-col {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-width: 100px;
+}
+
+.pi-day {
+  background-color: #CCCCCC;
+  color: white;
+  font-size: 18px;
+  width: 55px;
+  height: 55px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pi-month {
+  font-family: futura-pt-light;
+  font-size: 35px;
+  color: #CCCCCC;
+}
+
+.pi-year {
+  font-size: 20px;
+  color: #CCCCCC;
+}
+
+.pi-body-col {
+  font-family: futura-pt-light;
+  padding-top: 25px;
+  padding-left: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.pi-title {
+  font-family: futura-pt;
+  font-size: 30px;
+  letter-spacing: 2px;
+  color: #AAAAAA;
+}
+
+.pi-author-row {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.pi-by {
+  font-size: 21px;
+}
+
+.pi-author {
+  padding-left: 5px;
+  font-size: 21px;
+  color: #CCCCCC;
+}
+
+.pi-body {
+  padding-top: 10px;
+  font-size: 21px;
+  white-space: pre-wrap;
+}

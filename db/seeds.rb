@@ -8,22 +8,6 @@
 
 User.create({email: "rony@magicleap.com", password: "password", first_name: "Rony", last_name: "Abovitz"})
 
-Post.create({title: "magic leap - gearing up for an exciting year", body: "Hi everyone,
-
-It has been a while since I wrote to you all about what’s been going on at Magic Leap. The team and I are humbled by the overwhelming interest and support for our vision and technology. All of us are pouring very long hours, heart, and soul into making something new – how we will enable your digital and physical worlds to come together in a very personal, social, and magical way.
-
-As we near the end of 2016 and roll into a New Year, I wanted to give all of you a glimpse behind the scenes at Magic Leap.
-
-We have completed our first PEQ (Product Equivalent) build of our target form factor, in our new facility.
-We are about to start a much bigger PEQ run, which will exercise our supply chain and manufacturing/quality operations.
-The units we are building now are for engineering and manufacturing verification/validation testing, early reliability/quality testing, production line speed, and a bunch of other important parameters.
-There is also a lot more going in our development of software, applications, cool creative experiences and overall operational readiness.
-Stay tuned – the fun is just beginning.
-
-:-)
-
-Rony", user_id: 1})
-
 Post.create({title: "atoms not included", body: "Have you ever wondered about the difference between a product and a piece of art? Why in some films, food, cars, cameras, books, music, and in almost anything (even a kiss) you can detect that extra feeling, that bit of care, respect and artisanship that tells you that someone, somewhere, put their heart and soul into what you are experiencing?
 
 If you can, find someone who has an old Leica camera, a 1950’s Fender Stratocaster or Gibson Les Paul, or a Ramirez classical guitar. Someone thought deeply about every detail – every curve, every bit of glue, every ounce of the material.
@@ -49,6 +33,22 @@ We are dreaming the same dreams that captivate you, ones that go beyond what we 
 The parts that transcend atoms, the parts that make us thinking and feeling people; this is the most important part of our collective, creative future. Computing that bends to people’s needs, computing that makes us smarter, that allows us in all ways to have a better and more complete human experience, one of communication and sharing and enjoying. This is what we are working hard to achieve, an ideal which becomes a life’s work – what we all at Magic Leap hope can be understood in each step we take on this journey.
 
 We are working hard to deliver the very best parts to you, atoms not included.
+
+:-)
+
+Rony", user_id: 1})
+
+Post.create({title: "magic leap - gearing up for an exciting year", body: "Hi everyone,
+
+It has been a while since I wrote to you all about what’s been going on at Magic Leap. The team and I are humbled by the overwhelming interest and support for our vision and technology. All of us are pouring very long hours, heart, and soul into making something new – how we will enable your digital and physical worlds to come together in a very personal, social, and magical way.
+
+As we near the end of 2016 and roll into a New Year, I wanted to give all of you a glimpse behind the scenes at Magic Leap.
+
+We have completed our first PEQ (Product Equivalent) build of our target form factor, in our new facility.
+We are about to start a much bigger PEQ run, which will exercise our supply chain and manufacturing/quality operations.
+The units we are building now are for engineering and manufacturing verification/validation testing, early reliability/quality testing, production line speed, and a bunch of other important parameters.
+There is also a lot more going in our development of software, applications, cool creative experiences and overall operational readiness.
+Stay tuned – the fun is just beginning.
 
 :-)
 
