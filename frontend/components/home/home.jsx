@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import PostItem from './post_item';
 
 class Home extends React.Component {
   constructor(props) {
@@ -15,6 +16,8 @@ class Home extends React.Component {
   }
 
   render() {
+    let posts = this.props.allPosts;
+
     return(
       <div className="home">
         <div className="blog-header">
@@ -23,7 +26,9 @@ class Home extends React.Component {
         </div>
 
         <div className="blog-list">
-
+          {posts.map((post, idx) =>
+            <PostItem key={idx} post={post}/>
+          )}
         </div>
       </div>
     );
