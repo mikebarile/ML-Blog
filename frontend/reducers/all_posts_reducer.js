@@ -1,5 +1,4 @@
-import { RECEIVE_POSTS, CLEAR_STATE
-} from '../actions/post_actions';
+import { RECEIVE_POSTS } from '../actions/post_actions';
 import { merge } from 'lodash';
 
 const defaultState = [];
@@ -9,8 +8,6 @@ const AllPostsReducer = (state = defaultState, action) => {
   switch (action.type) {
     case RECEIVE_POSTS:
       return action.posts;
-    case CLEAR_STATE:
-      return defaultState;
     default:
       return state;
   }

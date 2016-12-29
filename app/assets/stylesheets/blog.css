@@ -37,8 +37,8 @@
   background-color: #CCCCCC;
   color: white;
   font-size: 18px;
-  width: 55px;
-  height: 55px;
+  width: 58px;
+  height: 58px;
   border-radius: 30px;
   display: flex;
   justify-content: center;
@@ -58,7 +58,7 @@
 
 .pi-body-col {
   font-family: futura-pt-light;
-  padding-top: 25px;
+  padding-top: 20px;
   padding-left: 25px;
   display: flex;
   flex-direction: column;
@@ -87,7 +87,7 @@
 }
 
 .pi-body {
-  padding-top: 10px;
+  padding-top: 20px;
   font-size: 21px;
   white-space: pre-wrap;
 }
