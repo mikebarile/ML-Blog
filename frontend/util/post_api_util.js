@@ -1,7 +1,7 @@
-export const fetchPost = (id, success, error) => {
+export const fetchPost = (title, success, error) => {
   $.ajax({
     method: 'GET',
-    url: `api/posts/${id}`,
+    url: `api/posts/${title}`,
     success,
     error
   });

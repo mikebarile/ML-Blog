@@ -32,7 +32,7 @@ export default ({ getState, dispatch }) => next => action => {
 
   switch(action.type) {
     case FETCH_POST:
-      fetchPost(action.id, receivePostSuccess, errorCallback);
+      fetchPost(action.title, receivePostSuccess, errorCallback);
       return next(action);
     case FETCH_POSTS:
       fetchPosts(receivePostsSuccess);

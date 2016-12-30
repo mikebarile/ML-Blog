@@ -14,9 +14,9 @@ export const UPDATE_POST_FORM = "UPDATE_POST_FORM";
 export const CLEAR_STATE = "CLEAR_STATE";
 export const CLEAR_POST_FORM = "CLEAR_POST_FORM";
 
-export const fetchPost = (id) => ({
+export const fetchPost = (title) => ({
   type: FETCH_POST,
-  id
+  title
 });
 
 export const fetchPosts = () => ({

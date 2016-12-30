@@ -10,7 +10,7 @@ const defaultState = {
     body: "",
     first_name: "",
     last_name: "",
-    created_at: null
+    created_at: ""
   },
   errors: []
 };
