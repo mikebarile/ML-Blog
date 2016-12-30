@@ -5,14 +5,11 @@ class AddPost extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      "title": 50,
-      "body": 500,
-      title_input: "",
-      body_input: "",
+      "title": "",
+      "body": "",
       user_id: null,
     };
     this.textUpdate = this.textUpdate.bind(this);
-    this.handleCounter = this.handleCounter.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleSubmitAppearance = this.handleSubmitAppearance.bind(this);
   }
@@ -27,21 +24,10 @@ class AddPost extends React.Component {
     }
   }
 
-  textUpdate(field, max) {
+  textUpdate(field) {
     return (e) => {
-      e.target.style.height = "0px";
-      e.target.style.height = (e.target.scrollHeight + 1)+"px";
-      this.setState({[field]: max - e.target.value.length});
+      this.setState({[field]: e.target.value});
     };
-  }
-
-  handleCounter(field, min) {
-    if (this.state[field] <= min) {
-      return `apf-${field}-counter apf-low`;
-    }
-    else {
-      return `apf-${field}-counter`;
-    }
   }
 
   handleSubmit() {
@@ -49,42 +35,39 @@ class AddPost extends React.Component {
   }
 
   handleSubmitAppearance() {
-    if (this.state.title < 50 && this.state.title >=0 &&
-      this.state.body < 500 && this.state.body >= 0 &&
-      this.state.url !== null && this.state.image_errors.length === 0) {
-        return "apf-next";
+    if (this.state.title !== "" && this.state.body !== "") {
+        return "apf-submit";
     }
     else {
-      return "apf-next-dead";
+      return "apf-submit-dead";
     }
   }
 
   render() {
     let user = this.props.currentUser;
     return (
-      <div className="add-post-form">
-        <div className="apf-first-half">
-          <div className="apf-col-first">
+      <div className="add-post">
+
+        <div className="apf-header">
+          <span className="apf-headline">add a blog post</span>
+        </div>
+
+        <div className="add-post-form">
+          <div className="apf-col">
             <div className="apf-form">
               <span className="apf-field-title">Post title</span>
-              <div className="apf-input-row">
-                <textarea
-                  ref="titleField"
-                  className="apf-text-full"
-                  onKeyUp={this.textUpdate("title", 50)}>
-                </textarea>
-                <span className={this.handleCounter("title", 10)}>{this.state.title}</span>
-              </div>
+              <textarea
+                ref="titleField"
+                className="apf-text-full"
+                onKeyUp={this.textUpdate("title")}>
+              </textarea>
 
               <span className="apf-field-title">Post body</span>
-                <div className="apf-input-row">
-                  <textarea
-                    ref="bodyField"
-                    className="apf-text-full"
-                    onKeyUp={this.textUpdate("body", 500)}>
-                  </textarea>
-                  <span className={this.handleCounter("body", 50)}>{this.state.body}</span>
-                </div>
+              <textarea
+                ref="bodyField"
+                className="apf-text-full apf-body-input"
+                onKeyUp={this.textUpdate("body")}>
+              </textarea>
             </div>
 
             <div className="apf-nav">
@@ -92,6 +75,7 @@ class AddPost extends React.Component {
             </div>
           </div>
         </div>
+
       </div>
     );
   }
