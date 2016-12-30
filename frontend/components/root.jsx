@@ -3,6 +3,7 @@ import { Provider } from 'react-redux';
 import { Router, Route, IndexRoute, IndexRedirect, hashHistory } from 'react-router';
 import App from './app.jsx';
 import HomeContainer from './home/home_container';
+import AddPostContainer from './add_post/add_post_container';
 
 
 const Root = ({ store }) => {
@@ -20,6 +21,7 @@ const Root = ({ store }) => {
       <Route path="/" component={App} >
         <IndexRedirect to="/blog" />
         <Route path="/blog" component={HomeContainer}/>
+        <Route path="/add-a-post" component={AddPostContainer}/>
       </Route>
     </Router>
   </Provider>

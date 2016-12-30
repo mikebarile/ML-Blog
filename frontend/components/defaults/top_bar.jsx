@@ -16,7 +16,7 @@ const TopBar = ({router, currentUser, logout, clearErrors}) => {
         src="https://res.cloudinary.com/dsguwnfdw/image/upload/v1482872640/Screen_Shot_2016-12-27_at_4.01.34_PM_bbjqzs.png"
         className={"logo"}
       />
-      <UserButtons currentUser={currentUser} logout={logout} clearErrors={clearErrors}/>
+    <UserButtons currentUser={currentUser} logout={logout} clearErrors={clearErrors} router={router}/>
     </div>
   );
 };

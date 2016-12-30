@@ -21,10 +21,15 @@ class UserButtons extends React.Component {
     this.setSwitch = this.setSwitch.bind(this);
     this.openDropdown = this.openDropdown.bind(this);
     this.closeDropdown = this.closeDropdown.bind(this);
+    this.addAPost = this.addAPost.bind(this);
   }
 
   showSignupModal() {
     this.refs.signupModal.show();
+  }
+
+  addAPost() {
+    this.props.router.push(`/add-a-post`);
   }
 
   hideSignupModal() {
@@ -104,6 +109,7 @@ class UserButtons extends React.Component {
     else {
       return (
         <div className="user-buttons">
+          <button className="user-button-new" onClick={this.addAPost}>ADD A POST</button>
           <Dropdown ref="userDropdown">
             <div onMouseEnter={this.openDropdown} onMouseLeave={this.closeDropdown}>
               <button className="user-button-logout" to="/">
