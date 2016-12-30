@@ -13,6 +13,12 @@
   text-shadow: 0 1px 0 rgba(0,0,0,.15);
 }
 
+.blog-headline {
+  margin-left: 140px;
+  margin-right: 140px;
+  text-align: center;
+}
+
 .blog-list {
   font-family: futura-pt;
   padding-top: 80px;
