@@ -6,16 +6,11 @@ class AddPost extends React.Component {
     super(props);
     this.state = {
       "title": "",
-      "body": "",
-      user_id: null,
+      "body": ""
     };
     this.textUpdate = this.textUpdate.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleSubmitAppearance = this.handleSubmitAppearance.bind(this);
-  }
-
-  componentDidMount() {
-    this.setState({user_id: this.props.currentUser.id});
   }
 
   componentDidUpdate() {

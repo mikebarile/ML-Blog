@@ -18,7 +18,9 @@ class Api::PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(post_params)
+    new_params = post_params
+    new_params["user_id"] = current_user.id
+    @post = Post.new(new_params)
     if @post.save
       render "api/posts/show"
     else
@@ -34,7 +36,7 @@ class Api::PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :body, :user_id)
+    params.require(:post).permit(:title, :body)
   end
 
 end

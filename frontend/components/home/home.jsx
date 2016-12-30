@@ -11,6 +11,10 @@ class Home extends React.Component {
     this.props.fetchPosts();
   }
 
+  componentDidMount() {
+    this.props.fetchPosts();
+  }
+
   render() {
     let posts = this.props.allPosts;
 
