@@ -31,7 +31,10 @@ class AddPost extends React.Component {
   }
 
   handleSubmit() {
-    console.log("test");
+    if (this.state.title !== "" && this.state.body !== "") {
+      this.props.createPost(this.state);
+      this.props.router.push('/blog');
+    }
   }
 
   handleSubmitAppearance() {

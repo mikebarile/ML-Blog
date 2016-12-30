@@ -23,10 +23,9 @@ export const fetchPosts = () => ({
   type: FETCH_POSTS,
 });
 
-export const createPost = (post, router) => ({
+export const createPost = (post) => ({
   type: CREATE_POST,
-  post,
-  router
+  post
 });
 
 export const deletePost = (id) => ({
