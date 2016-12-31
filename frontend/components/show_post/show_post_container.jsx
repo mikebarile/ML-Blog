@@ -4,8 +4,7 @@ import { signup } from '../../actions/session_actions';
 import { fetchPost } from '../../actions/post_actions';
 
 const mapStateToProps = ({session, post}) => ({
-  loggedIn: Boolean(session.currentUser),
-  errors: session.errors,
+  currentUser: session.currentUser,
   post: post
 });
 

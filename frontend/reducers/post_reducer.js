@@ -8,6 +8,7 @@ const defaultState = {
     id: null,
     title: "",
     body: "",
+    user_id: null,
     first_name: "",
     last_name: "",
     created_at: ""

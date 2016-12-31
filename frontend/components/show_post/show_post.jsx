@@ -4,14 +4,34 @@ import { Link } from 'react-router';
 class ShowPost extends React.Component {
   constructor(props) {
     super(props);
+    this.renderRow = this.renderRow.bind(this);
   }
 
   componentWillMount() {
     this.props.fetchPost(this.props.params.title);
   }
 
-  componentDidUpdate() {
-    console.log(this.props);
+  renderRow(type) {
+    if (type === "author"){
+      if (this.props.currentUser && this.props.currentUser.id === this.props.post.currentPost.user_id) {
+        return "pi-row pi-dead";
+      }
+      else {
+        return "pi-row pi-live";
+      }
+    }
+    else {
+      if (this.props.currentUser && this.props.currentUser.id === this.props.post.currentPost.user_id) {
+        return "pi-row pi-live";
+      }
+      else {
+        return "pi-row pi-dead";
+      }
+    }
+  }
+
+  renderAuthorRow() {
+
   }
 
   render() {
@@ -46,9 +66,14 @@ class ShowPost extends React.Component {
 
             <div className="pi-body-col">
               <span className="pi-title">{post.title.toLowerCase()}</span>
-              <div className="pi-author-row">
-                <span className="pi-by">by</span>
+              <div className={this.renderRow("author")}>
+                <span>by</span>
                 <span className="pi-author">{post.first_name.toLowerCase()} {post.last_name.toLowerCase()}</span>
+              </div>
+              <div className={this.renderRow("buttons")}>
+                <span className="pi-button">edit post</span>
+                <span className="pi-crud-text">|</span>
+                <span className="pi-button">delete post</span>
               </div>
               <span className="pi-body">{post.body}</span>
             </div>
