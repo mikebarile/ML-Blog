@@ -1,7 +1,7 @@
-export const fetchPost = (title, success, error) => {
+export const fetchPost = (id, success, error) => {
   $.ajax({
     method: 'GET',
-    url: `api/posts/${title}`,
+    url: `api/posts/${id}`,
     success,
     error
   });
@@ -38,7 +38,7 @@ export const deletePost = (id, success, error) => {
 export const editPost = (post, success, error) => {
   $.ajax({
     method: 'PATCH',
-    url: `api/posts/${post.id}`,
+    url: `api/posts/${post.title}`,
     data: {"post": post},
     success,
     error

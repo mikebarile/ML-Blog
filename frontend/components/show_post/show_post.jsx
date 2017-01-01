@@ -6,10 +6,11 @@ class ShowPost extends React.Component {
     super(props);
     this.renderRow = this.renderRow.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
+    this.handleEdit = this.handleEdit.bind(this);
   }
 
   componentWillMount() {
-    this.props.fetchPost(this.props.params.title);
+    this.props.fetchPost(this.props.params.id);
   }
 
   renderRow(type) {
@@ -34,6 +35,10 @@ class ShowPost extends React.Component {
   handleDelete() {
     this.props.deletePost(this.props.post.id);
     this.props.router.push('/blog');
+  }
+
+  handleEdit() {
+    this.props.router.push(`/blog/${this.props.post.id}/edit`);
   }
 
   render() {
@@ -73,7 +78,7 @@ class ShowPost extends React.Component {
                 <span className="pi-author">{post.first_name.toLowerCase()} {post.last_name.toLowerCase()}</span>
               </div>
               <div className={this.renderRow("buttons")}>
-                <span className="pi-button">edit post</span>
+                <span className="pi-button" onClick={this.handleEdit}>edit post</span>
                 <span className="pi-crud-text">|</span>
                 <span className="pi-button" onClick={this.handleDelete}>delete post</span>
               </div>

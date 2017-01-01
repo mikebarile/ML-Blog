@@ -5,6 +5,7 @@ import App from './app.jsx';
 import HomeContainer from './home/home_container';
 import AddPostContainer from './add_post/add_post_container';
 import ShowPostContainer from './show_post/show_post_container';
+import EditPostContainer from './edit_post/edit_post_container';
 
 const Root = ({ store }) => {
 
@@ -21,7 +22,8 @@ const Root = ({ store }) => {
         <Route path="/" component={App} >
           <IndexRedirect to="/blog" />
           <Route path="/blog" component={HomeContainer}/>
-          <Route path="/blog/:title" component={ShowPostContainer}/>
+          <Route path="/blog/:id" component={ShowPostContainer}/>
+          <Route path="/blog/:id/edit" component={EditPostContainer}/>
           <Route path="/add-a-post" component={AddPostContainer}/>
         </Route>
       </Router>

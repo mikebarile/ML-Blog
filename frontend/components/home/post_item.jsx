@@ -8,7 +8,7 @@ class PostItem extends React.Component {
   }
 
   handleClick() {
-    this.props.router.push(`/blog/${this.props.post.title}`);
+    this.props.router.push(`/blog/${this.props.post.id}`);
   }
 
   render() {

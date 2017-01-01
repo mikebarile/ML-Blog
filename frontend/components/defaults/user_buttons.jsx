@@ -96,7 +96,7 @@ class UserButtons extends React.Component {
 
           <button className="user-button-new" onClick={this.showLoginModal}>LOGIN</button>
           <Modal
-            lassName="user-modal"
+            className="user-modal"
             ref="loginModal"
             keyboard={true}
             onHide={this.switchToSignup}>

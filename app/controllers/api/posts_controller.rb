@@ -5,16 +5,7 @@ class Api::PostsController < ApplicationController
   end
 
   def show
-    @post = Post.where("title = '#{params[:id]}'").first
-  end
-
-  def patch
     @post = Post.find(params[:id])
-    if @post.update(post_params)
-      render "api/posts/show"
-    else
-      render json: @post.errors.full_messages, status: 422
-    end
   end
 
   def create
@@ -34,13 +25,25 @@ class Api::PostsController < ApplicationController
     else
       @post = Post.find(params[:id])
       @post.destroy
+      render "api/posts/show"
+    end
+  end
+
+  def update
+    @post = Post.find(post_params[:id])
+    if !current_user || !@post || current_user.id != @post.user_id
+      render json: "User does not have permission to edit this post", status: 422
+    elsif @post.update(post_params)
+      render "api/posts/show"
+    else
+      render json: @post.errors.full_messages, status: 422
     end
   end
 
   private
 
   def post_params
-    params.require(:post).permit(:title, :body)
+    params.require(:post).permit(:title, :body, :id)
   end
 
 end
