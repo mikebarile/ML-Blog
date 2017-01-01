@@ -29,8 +29,12 @@ class Api::PostsController < ApplicationController
   end
 
   def destroy
-    @post = Post.find(params[:id])
-    @post.destroy
+    if !current_user || !params[:id] || current_user.id != Post.find(params[:id]).user_id
+      render json: "User does not have permission to delete this post", status: 422
+    else
+      @post = Post.find(params[:id])
+      @post.destroy
+    end
   end
 
   private

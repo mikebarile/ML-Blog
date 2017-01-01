@@ -1,4 +1,4 @@
-import { receivePosts, receivePost, receiveNewPost, clearPost,
+import { receivePosts, receivePost, clearPost,
   FETCH_POST, FETCH_POSTS, CREATE_POST, DELETE_POST, EDIT_POST
 } from '../actions/post_actions';
 
@@ -19,10 +19,6 @@ export default ({ getState, dispatch }) => next => action => {
     dispatch(clearPost(id));
   };
 
-  const receiveNewPostSuccess = post => {
-    dispatch(receiveNewPost(post));
-  };
-
   switch(action.type) {
     case FETCH_POST:
       fetchPost(action.title, receivePostSuccess);
@@ -31,7 +27,7 @@ export default ({ getState, dispatch }) => next => action => {
       fetchPosts(receivePostsSuccess);
       return next(action);
     case CREATE_POST:
-      createPost(action.post, receiveNewPostSuccess);
+      createPost(action.post);
       return next(action);
     case DELETE_POST:
       deletePost(action.id, removePostSuccess);
