@@ -1,5 +1,4 @@
-import { receivePosts, receivePost, receiveNewPost, removePost,
-  receivePostErrors, updatePostForm,
+import { receivePosts, receivePost, receiveNewPost, clearPost,
   FETCH_POST, FETCH_POSTS, CREATE_POST, DELETE_POST, EDIT_POST
 } from '../actions/post_actions';
 
@@ -16,23 +15,17 @@ export default ({ getState, dispatch }) => next => action => {
     dispatch(receivePosts(posts));
   };
 
-  const removePostSuccess = post => {
-    dispatch(removePost(post));
+  const removePostSuccess = id => {
+    dispatch(clearPost(id));
   };
 
   const receiveNewPostSuccess = post => {
     dispatch(receiveNewPost(post));
   };
 
-  const receiveImageSuccess = object => {
-    dispatch(updatePostForm({image_url: object.secure_url}));
-  };
-
-  const errorCallback = xhr => dispatch(receivePostErrors(xhr.responseJSON));
-
   switch(action.type) {
     case FETCH_POST:
-      fetchPost(action.title, receivePostSuccess, errorCallback);
+      fetchPost(action.title, receivePostSuccess);
       return next(action);
     case FETCH_POSTS:
       fetchPosts(receivePostsSuccess);

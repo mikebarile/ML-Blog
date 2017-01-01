@@ -5,14 +5,7 @@ export const DELETE_POST = "DELETE_POST";
 export const EDIT_POST = "EDIT_POST";
 export const RECEIVE_POST = "RECEIVE_POST";
 export const RECEIVE_POSTS = "RECEIVE_POSTS";
-export const RECEIVE_NEW_POST = "RECEIVE_NEW_POST";
-export const REMOVE_POST = "REMOVE_POST";
-export const RECEIVE_POST_ERRORS = "RECEIVE_POST_ERRORS";
-export const CLEAR_POST_ERRORS = "CLEAR_POST_ERRORS";
 export const CLEAR_POST = "CLEAR_POST";
-export const UPDATE_POST_FORM = "UPDATE_POST_FORM";
-export const CLEAR_STATE = "CLEAR_STATE";
-export const CLEAR_POST_FORM = "CLEAR_POST_FORM";
 
 export const fetchPost = (title) => ({
   type: FETCH_POST,
@@ -29,7 +22,7 @@ export const createPost = (post) => ({
 });
 
 export const deletePost = (id) => ({
-  type: CREATE_POST,
+  type: DELETE_POST,
   id
 });
 
@@ -48,38 +41,8 @@ export const receivePosts = (posts) => ({
   posts
 });
 
-export const receiveNewPost = (post) => ({
-  type: RECEIVE_NEW_POST,
-  post
-});
 
-export const removePost = (post) => ({
-  type: REMOVE_POST,
-  post
-});
-
-export const receivePostErrors = (errors) => ({
-  type: RECEIVE_POST_ERRORS,
-  errors
-});
-
-export const clearPostErrors = () => ({
-  type: CLEAR_POST_ERRORS
-});
-
-export const clearPost = () => ({
-  type: CLEAR_POST
-});
-
-export const updatePostForm = (formParams) => ({
-  type: UPDATE_POST_FORM,
-  formParams
-});
-
-export const clearState = () => ({
-  type: CLEAR_STATE
-});
-
-export const clearPostForm = () => ({
-  type: CLEAR_POST_FORM
+export const clearPost = (id) => ({
+  type: CLEAR_POST,
+  id
 });

@@ -5,6 +5,7 @@ class ShowPost extends React.Component {
   constructor(props) {
     super(props);
     this.renderRow = this.renderRow.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
   }
 
   componentWillMount() {
@@ -13,7 +14,7 @@ class ShowPost extends React.Component {
 
   renderRow(type) {
     if (type === "author"){
-      if (this.props.currentUser && this.props.currentUser.id === this.props.post.currentPost.user_id) {
+      if (this.props.currentUser && this.props.currentUser.id === this.props.post.user_id) {
         return "pi-row pi-dead";
       }
       else {
@@ -21,7 +22,7 @@ class ShowPost extends React.Component {
       }
     }
     else {
-      if (this.props.currentUser && this.props.currentUser.id === this.props.post.currentPost.user_id) {
+      if (this.props.currentUser && this.props.currentUser.id === this.props.post.user_id) {
         return "pi-row pi-live";
       }
       else {
@@ -30,12 +31,13 @@ class ShowPost extends React.Component {
     }
   }
 
-  renderAuthorRow() {
-
+  handleDelete() {
+    this.props.deletePost(this.props.post.id);
+    this.props.router.push('/blog');
   }
 
   render() {
-    let post = this.props.post.currentPost;
+    let post = this.props.post;
 
     if (post.created_at === "") {
       return (
@@ -73,7 +75,7 @@ class ShowPost extends React.Component {
               <div className={this.renderRow("buttons")}>
                 <span className="pi-button">edit post</span>
                 <span className="pi-crud-text">|</span>
-                <span className="pi-button">delete post</span>
+                <span className="pi-button" onClick={this.handleDelete}>delete post</span>
               </div>
               <span className="pi-body">{post.body}</span>
             </div>

@@ -36,7 +36,7 @@ class PostItem extends React.Component {
 
           <div className="pi-body-col">
             <span className="pi-title">{post.title.toLowerCase()}</span>
-            <div className="pi-row">
+            <div className="pi-row pi-live">
               <span className="pi-by">by</span>
               <span className="pi-author">{post.first_name.toLowerCase()} {post.last_name.toLowerCase()}</span>
             </div>

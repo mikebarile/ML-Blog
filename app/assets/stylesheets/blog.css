@@ -133,5 +133,5 @@
 }
 
 .pi-dead {
-  font-size: 0px;
+  display: none;
 }
