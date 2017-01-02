@@ -65,7 +65,8 @@
   align-items: center;
   color: black;
   font-size: 22px;
-  font-family: futura-pt;
+  font-family: futura-pt-light;
+  font-weight: bolder;
   background-color: #EBEBEB;
 }
 

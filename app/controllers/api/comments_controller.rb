@@ -1,9 +1,5 @@
 class Api::CommentsController < ApplicationController
 
-  def index
-    @comments = Comment.where("post_id = '#{params[:id]}'")
-  end
-
   def create
     new_params = comment_params
     new_params["user_id"] = current_user.id
@@ -39,7 +35,7 @@ class Api::CommentsController < ApplicationController
   private
 
   def comment_params
-    params.require(:comment).permit(:body, :comment_id)
+    params.require(:comment).permit(:body, :post_id)
   end
 
 end

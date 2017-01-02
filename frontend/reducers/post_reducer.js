@@ -1,4 +1,5 @@
-import {RECEIVE_POST, CLEAR_POST } from '../actions/post_actions';
+import { RECEIVE_POST, CLEAR_POST } from '../actions/post_actions';
+import { RECEIVE_NEW_COMMENT } from '../actions/comment_actions';
 import { merge } from 'lodash';
 
 const defaultState = {
@@ -19,6 +20,10 @@ const PostReducer = (state = defaultState, action) => {
       return action.post;
     case CLEAR_POST:
       return defaultState;
+    case RECEIVE_NEW_COMMENT:
+      newState = merge({}, state);
+      newState.comments.unshift(action.comment);
+      return newState;
     default:
       return state;
   }

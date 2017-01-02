@@ -55,7 +55,7 @@
 }
 
 .spcc-date {
-  font-size: 18px;
+  font-size: 19px;
   color: #AAAAAA;
 }
 
@@ -69,9 +69,11 @@
   height: 42px;
   justify-content: center;
   align-items: center;
+  align-content: center;
   background-color: #7A939C;
   color: white;
   border-radius: 4px;
+  font-size: 17px;
 }
 
 .spc-add-comment-button-live::after {
@@ -84,9 +86,11 @@
   height: 42px;
   justify-content: center;
   align-items: center;
+  align-content: center;
   background-color: #7A939C;
   color: white;
   border-radius: 4px;
+  font-size: 17px;
 }
 
 .spc-hide-button-live::after {

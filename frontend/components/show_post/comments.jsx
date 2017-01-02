@@ -120,7 +120,7 @@ class Comments extends React.Component {
       <div className="sp-comments">
         <div className="sp-first-col">
           <div className="spc-header-row" >
-            <span className="spc-comments-header">{this.handleCommentCount(post.count_comments)}</span>
+            <span className="spc-comments-header">{this.handleCommentCount(this.props.post.comments.length)}</span>
             <button className={this.handleWriteAReview()} onClick={this.handleAddCommentClick}></button>
           </div>
           {this.handleCreateComment()}
