@@ -21,14 +21,14 @@
 .add-post-form {
   display: flex;
   color: #484848;
-  font-family: futura-pt;
+  font-family: futura-pt-light;
   justify-content: center;
 }
 
 .apf-col {
   margin-top: 65px;
-  width: 1000px;
-  min-width: 1000px;
+  width: calc(100% - 400px);
+  min-width: calc(100% - 400px);
   display: flex;
   flex-direction: column;
 }
