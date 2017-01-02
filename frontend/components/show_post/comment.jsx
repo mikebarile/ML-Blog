@@ -53,7 +53,7 @@ class Comment extends React.Component {
       return "pi-row pi-live";
     }
     else {
-      return "pi-row pi-live";
+      return "pi-row pi-dead";
     }
   }
 
