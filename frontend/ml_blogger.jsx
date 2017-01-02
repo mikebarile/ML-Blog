@@ -17,10 +17,4 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store}/>, root);
-
-  // Testing window functions
-  window.store = store;
-  window.login = login;
-  window.logout = logout;
-  window.user = {user: {username: "mikebarile13", password: "password"}};
 });
