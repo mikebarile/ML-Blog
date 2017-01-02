@@ -52,11 +52,16 @@ class ShowPost extends React.Component {
     }
 
     let date = post.created_at;
+    let dateStamp = date.slice(0, 10);
+    let timeStamp = date.slice(11, 19);
+    date = `${dateStamp} ${timeStamp} UTC`;
+    date = new Date(date);
+
     let months = [ "jan", "feb", "mar", "apr", "may", "june",
     "july", "aug", "sep", "oct", "nov", "dec" ];
-    let day = date.substring(8, 10);
-    let year = date.substring(0, 4);
-    let month = months[parseInt(date.substring(5, 7), 10)-1];
+    let day = date.getDate();
+    let month = months[date.getMonth()];
+    let year = date.getFullYear();
 
     return(
       <div className="home">

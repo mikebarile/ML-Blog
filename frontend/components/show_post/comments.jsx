@@ -104,7 +104,11 @@ class Comments extends React.Component {
       return (<div></div>);
     }
     comments = this.props.post.comments.map((comment, idx) => (
-      <Comment key={idx} comment={comment}/>
+      <Comment
+        key={idx}
+        comment={comment}
+        currentUser={this.props.currentUser}
+      />
     ));
     return comments;
   }

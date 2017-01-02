@@ -11,23 +11,30 @@ class Comment extends React.Component {
   }
 
   handleDate(date) {
-    let dates = {
-      1: "January",
-      2: "February",
-      3: "March",
-      4: "April",
-      5: "May",
-      6: "June",
-      7: "July",
-      8: "August",
-      9: "September",
-      10: "October",
-      11: "November",
-      12: "December"
-    };
+    let dateStamp = date.slice(0, 10);
+    let timeStamp = date.slice(11, 19);
+    date = `${dateStamp} ${timeStamp} UTC`;
+    date = new Date(date);
 
-    let month = dates[date.slice(5, 7)];
-    return `${month}, ${date.slice(0, 4)}`;
+    let months = [
+      "january",
+      "february",
+      "march",
+      "april",
+      "may",
+      "june",
+      "july",
+      "august",
+      "september",
+      "october",
+      "november",
+      "december"
+    ];
+
+    let day = date.getDate();
+    let month = months[date.getMonth()];
+    let year = date.getFullYear();
+    return `${month} ${day}, ${year}`;
   }
 
   render() {

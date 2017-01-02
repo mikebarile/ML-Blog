@@ -9,7 +9,7 @@
 User.create({email: "rony@magicleap.com", password: "password", first_name: "Rony", last_name: "Abovitz"})
 User.create({email: "neal@magicleap.com", password: "password", first_name: "Neal", last_name: "Stephenson"})
 
-Post.create({title: "welcome to magic leap.", created_at: "2014-10-19", body: "I remember when I first discovered diving underwater. I was just a kid, pestering my parents to let me dive, please please please, until one day I had a mask. It filled with seawater every once in a while, and it was just a child's snorkeling kit – but to me it was a portal to a new world: vivid, alive, so very real and so present. Tiny jeweled fish would swim right up to me, peering into the thin glass wall that separated me from them. The world was an awesome place to have great adventures (and yes, I did dive with sharks and barracudas, but that is another story for another day).
+Post.create({title: "welcome to magic leap.", created_at: "2014-10-20", body: "I remember when I first discovered diving underwater. I was just a kid, pestering my parents to let me dive, please please please, until one day I had a mask. It filled with seawater every once in a while, and it was just a child's snorkeling kit – but to me it was a portal to a new world: vivid, alive, so very real and so present. Tiny jeweled fish would swim right up to me, peering into the thin glass wall that separated me from them. The world was an awesome place to have great adventures (and yes, I did dive with sharks and barracudas, but that is another story for another day).
 I also remember a few other places where I found a new place, a deep ocean to discover: in films, in books, in comics, in art, and in computing. Great movies could transport you to whole new worlds and universes. Books, comics, and art meant creative freedom. Computing meant total personal freedom with technology: I could create something new and share it with my friends. Machines had a language. Science and physics could make sense when put into action with computers. Of all these new things, it was always the real world that was the most magical and amazing. An encounter with a horse on a farm, being with an eagle and her nest at Cape Canaveral, and kayaking with a pod of dolphins in the Florida Keys. Fireflies at night bested any display.
 
 I realized what the real world could give in abundance, our past and current technologies lacked: visceral experience. Being with your friends, seeing a tree, watching a butterfly land on your finger – all of these require direct interaction with our senses. Our media and computing today is separate from us. We watch television, we read books to understand the real or imagined experiences of others. Playing videos games can be awesome, but it can also lack the immediacy of playing football in the mud, or of building a snow fort with your friends. I wondered for many years what it would take to close the gap, to integrate and synthesize all of the things I love. Why couldn't visceral experience combine with computing? Why can't I see a dragon? Why can't computing interact us with us more naturally, like the real world?
@@ -30,7 +30,7 @@ The world at times can be hard and cynical. But every generation deserves its ch
 
 Rony", user_id: 1})
 
-Post.create({title: "an unexpected adventure", created_at: "2014-12-16", body: "A few months ago, two Irishmen, a Scot, and an American appeared on my doorstep with Orcrist, aka '"'Goblin-cleaver,'"' the ancient sword forged during the First Age of Middle Earth by the High Elves of Gondolin, later retrieved from a troll hoard by Thorin Oakenshield. It’s not every day that someone turns up at your house bearing a mythic sword, and so I did what anyone who has read a lot of fantasy novels would: I let them in and gave them beer. True to form, they invited me on a quest and asked me to sign a contract (well, an NDA actually).
+Post.create({title: "an unexpected adventure", created_at: "2014-12-17", body: "A few months ago, two Irishmen, a Scot, and an American appeared on my doorstep with Orcrist, aka '"'Goblin-cleaver,'"' the ancient sword forged during the First Age of Middle Earth by the High Elves of Gondolin, later retrieved from a troll hoard by Thorin Oakenshield. It’s not every day that someone turns up at your house bearing a mythic sword, and so I did what anyone who has read a lot of fantasy novels would: I let them in and gave them beer. True to form, they invited me on a quest and asked me to sign a contract (well, an NDA actually).
 The sword-bearers were from a company that had been jumping up and down in my peripheral vision for a year or two. A company with a funny name (Magic Leap), an out-of-the-way location (Fort Lauderdale), and a tendency to play its cards close to its vest. Sir Richard Taylor, founder and head of WETA Workshop, is a member of Magic Leap’s board of directors, which explains why they are able to show up with ice-breakers like Orcrist. Alas, I didn’t get to add it to my own personal troll hoard. But there is talk of replacing it with a high-tech katana like the one wielded by Hiro Protagonist: a fictional character in Snow Crash, a book I wrote twenty-five years ago.
 
 If you’re one of the seven billion people who haven’t read Snow Crash, I’ll explain that it has a lot to do with both virtual reality (VR) and augmented reality (AR). When I wrote it, it seemed as though those technologies were just around the corner. Accordingly, Snow Crash is set in a near-future world.
@@ -59,7 +59,7 @@ I sometimes feel that the creative minds who make games have done about as much 
 
 What applies to games applies as well to other things of interest, such as making the world safe for books, doing new things with science and math visualization, and simply creating art for art’s sake. Regarding all of those things, I look forward to making future posts on this blog.", user_id: 2})
 
-Post.create({title: "what's love got to do with it?", created_at: "2015-02-14", body: "What does love have to do with a technology company? Everything. At least for us here at Magic Leap. Our whole company is based on it. It starts with a love for people in general - wanting to bring joy and a sense of magic and wonder to everyone. We try hard to find and hire individuals who bring a love of their work and craft, a deep sense of passion and drive and creative energy to every aspect of what we are developing. Love never ends - it is that deep, human part of us that allows us to connect, to experience transcendent spiritual wonder. Technology will never replace human relationships and bonds, and it will never replace the amazing world around us. But it can enable us to open up those parts of us we first felt as kids. Complete joy and wonder and love of others and the creatures and plants and people all around us.
+Post.create({title: "what's love got to do with it?", created_at: "2015-02-15", body: "What does love have to do with a technology company? Everything. At least for us here at Magic Leap. Our whole company is based on it. It starts with a love for people in general - wanting to bring joy and a sense of magic and wonder to everyone. We try hard to find and hire individuals who bring a love of their work and craft, a deep sense of passion and drive and creative energy to every aspect of what we are developing. Love never ends - it is that deep, human part of us that allows us to connect, to experience transcendent spiritual wonder. Technology will never replace human relationships and bonds, and it will never replace the amazing world around us. But it can enable us to open up those parts of us we first felt as kids. Complete joy and wonder and love of others and the creatures and plants and people all around us.
 When someone creates something with a sense of love and passion - you feel it, and you taste it. It can be a chocolate chip cookie, a drawing, a concert, or a film. That feeling transmits to us somehow through the medium.
 
 In the new medium we are creating, we hope that the love we are pouring into it all now, and the intensity and passion that will come from everyone who creates something cool and amazing with it - will come through all bright and shiny and awesome.
@@ -68,7 +68,7 @@ Happy Valentines Day :-)
 
 Rony", user_id: 1})
 
-Post.create({title: "the mom rule", created_at: "2015-02-25", body: "I love the dream of VR and AR.
+Post.create({title: "the mom rule", created_at: "2015-02-26", body: "I love the dream of VR and AR.
 
 I love ice cream.
 
@@ -98,7 +98,7 @@ That dream we all share of this amazing future – it will happen. But it has to
 
 Rony", user_id: 1})
 
-Post.create({title: "atoms not included", created_at: "2016-02-02", body: "Have you ever wondered about the difference between a product and a piece of art? Why in some films, food, cars, cameras, books, music, and in almost anything (even a kiss) you can detect that extra feeling, that bit of care, respect and artisanship that tells you that someone, somewhere, put their heart and soul into what you are experiencing?
+Post.create({title: "atoms not included", created_at: "2016-02-03", body: "Have you ever wondered about the difference between a product and a piece of art? Why in some films, food, cars, cameras, books, music, and in almost anything (even a kiss) you can detect that extra feeling, that bit of care, respect and artisanship that tells you that someone, somewhere, put their heart and soul into what you are experiencing?
 
 If you can, find someone who has an old Leica camera, a 1950’s Fender Stratocaster or Gibson Les Paul, or a Ramirez classical guitar. Someone thought deeply about every detail – every curve, every bit of glue, every ounce of the material.
 
@@ -128,7 +128,7 @@ We are working hard to deliver the very best parts to you, atoms not included.
 
 Rony", user_id: 1})
 
-Post.create({title: "magic leap - gearing up for an exciting year", created_at: "2016-12-09", body: "Hi everyone,
+Post.create({title: "magic leap - gearing up for an exciting year", created_at: "2016-12-10", body: "Hi everyone,
 
 It has been a while since I wrote to you all about what’s been going on at Magic Leap. The team and I are humbled by the overwhelming interest and support for our vision and technology. All of us are pouring very long hours, heart, and soul into making something new – how we will enable your digital and physical worlds to come together in a very personal, social, and magical way.
 
