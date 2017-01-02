@@ -69,7 +69,7 @@ Happy Valentines Day :-)
 Rony", user_id: 1})
 
 Post.create({title: "the mom rule", created_at: "2015-02-25", body: "I love the dream of VR and AR.
-  
+
 I love ice cream.
 
 I love my Mom (and Dad).
@@ -143,3 +143,6 @@ Stay tuned – the fun is just beginning.
 :-)
 
 Rony", user_id: 1})
+
+Comment.create({body: "Love this post!", post_id: 6, user_id: 2})
+Comment.create({body: "Still love this post!", post_id: 6, user_id: 2})

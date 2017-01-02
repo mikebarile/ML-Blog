@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import Comments from './comments';
 
 class ShowPost extends React.Component {
   constructor(props) {
@@ -86,6 +87,12 @@ class ShowPost extends React.Component {
             </div>
           </div>
         </div>
+
+        <Comments
+          post={this.props.post}
+          currentUser={this.props.currentUser}
+          createComment={this.props.createComment}
+        />
       </div>
     );
   }
