@@ -97,6 +97,8 @@ class ShowPost extends React.Component {
           post={this.props.post}
           currentUser={this.props.currentUser}
           createComment={this.props.createComment}
+          editComment={this.props.editComment}
+          deleteComment={this.props.deleteComment}
         />
       </div>
     );

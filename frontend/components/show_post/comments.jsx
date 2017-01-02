@@ -108,6 +108,8 @@ class Comments extends React.Component {
         key={idx}
         comment={comment}
         currentUser={this.props.currentUser}
+        editComment={this.props.editComment}
+        deleteComment={this.props.deleteComment}
       />
     ));
     return comments;
