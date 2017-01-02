@@ -8,6 +8,7 @@
 
 User.create({email: "rony@magicleap.com", password: "password", first_name: "Rony", last_name: "Abovitz"})
 User.create({email: "neal@magicleap.com", password: "password", first_name: "Neal", last_name: "Stephenson"})
+User.create({email: "mikebarile13@gmail.com", password: "password", first_name: "Mike", last_name: "Barile"})
 
 Post.create({title: "welcome to magic leap.", created_at: "2014-10-20", body: "I remember when I first discovered diving underwater. I was just a kid, pestering my parents to let me dive, please please please, until one day I had a mask. It filled with seawater every once in a while, and it was just a child's snorkeling kit – but to me it was a portal to a new world: vivid, alive, so very real and so present. Tiny jeweled fish would swim right up to me, peering into the thin glass wall that separated me from them. The world was an awesome place to have great adventures (and yes, I did dive with sharks and barracudas, but that is another story for another day).
 I also remember a few other places where I found a new place, a deep ocean to discover: in films, in books, in comics, in art, and in computing. Great movies could transport you to whole new worlds and universes. Books, comics, and art meant creative freedom. Computing meant total personal freedom with technology: I could create something new and share it with my friends. Machines had a language. Science and physics could make sense when put into action with computers. Of all these new things, it was always the real world that was the most magical and amazing. An encounter with a horse on a farm, being with an eagle and her nest at Cape Canaveral, and kayaking with a pod of dolphins in the Florida Keys. Fireflies at night bested any display.
@@ -144,5 +145,18 @@ Stay tuned – the fun is just beginning.
 
 Rony", user_id: 1})
 
-Comment.create({body: "Love this post!", post_id: 6, user_id: 2})
-Comment.create({body: "Still love this post!", post_id: 6, user_id: 2})
+Post.create({title: "hi magic leap! it's mike", created_at: "2017-01-03", body: "Hi team,
+
+I can't tell you how excited I am to be interviewing with Magic Leap! I've been scraping the internet for any scrap of news or information about your company ever since I first heard of it around two years ago. As many of my friends will attest, it's been a dream of mine to work at your company where you're building such interesting and impactful technology. I'm really excited about the opportunity to interview with your for a developer role!
+
+I think I have extremely relevant experience and will be able to immediately contribute to the web team. I have experience accross the entire web stack, including on Rails and PostgreSQL on the backend and React, Redux, JQuery, and vanilla JS on the front end. I also have extensive data analytics engineering experience from my time at Uber where I built several internal tools that are used by thousands of people today. I'm a non-stop learner and my biggest priority in my next role is to learn as much as possible.
+
+I hope you enjoy this clone I built of your web blog app! I'm really excited for your feedback and for next steps.
+
+Looking forward to connecting soon :)
+
+Cheers,
+Mike
+"})
+
+Comment.create({body: "I can't wait to see what Magic Leap has in store for 2017 :)", post_id: 6, user_id: 3})
