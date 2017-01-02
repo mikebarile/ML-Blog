@@ -21,6 +21,17 @@ class Comment extends React.Component {
     this.renderBody = this.renderBody.bind(this);
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.comment.id !== this.props.comment.id){
+      this.setState({
+        showEdit: false,
+        id: nextProps.comment.id,
+        post_id: nextProps.comment.post_id,
+        body: nextProps.comment.body
+      });
+    }
+  }
+
   handleDate(date) {
     let dateStamp = date.slice(0, 10);
     let timeStamp = date.slice(11, 19);
