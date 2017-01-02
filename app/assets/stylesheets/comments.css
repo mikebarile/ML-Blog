@@ -13,12 +13,13 @@
   margin-top: 30px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;;
+  justify-content: space-between;
   align-items: center;
   padding-bottom: 20px;
   margin-bottom: 20px;
   border-bottom: 1px solid #C4C4C4;
   min-width: 500px;
+  width: 500px;
 }
 
 .spc-comments-header {

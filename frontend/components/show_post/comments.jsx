@@ -177,24 +177,24 @@ class Comments extends React.Component {
           <div className="spc-header-row" >
             <span className="spc-comments-header">{this.handleCommentCount(this.props.post.comments.length)}</span>
             <button className={this.handleAddAComment()} onClick={this.handleAddCommentClick}></button>
-            <Modal
-              className="user-modal"
-              ref="loginModal"
-              keyboard={true}
-              onHide={this.switchToSignup}>
-              <LoginForm hideLoginModal={this.hideLoginModal} switch={this.setSwitch}/>
-            </Modal>
-            <Modal
-              className="user-modal"
-              ref="signupModal"
-              keyboard={true}
-              onHide={this.switchToLogin}>
-              <SignupForm hideSignupModal={this.hideSignupModal} switch={this.setSwitch}/>
-            </Modal>
           </div>
           {this.handleCreateComment()}
           {this.handleComments()}
         </div>
+        <Modal
+          className="user-modal"
+          ref="loginModal"
+          keyboard={true}
+          onHide={this.switchToSignup}>
+          <LoginForm hideLoginModal={this.hideLoginModal} switch={this.setSwitch}/>
+        </Modal>
+        <Modal
+          className="user-modal"
+          ref="signupModal"
+          keyboard={true}
+          onHide={this.switchToLogin}>
+          <SignupForm hideSignupModal={this.hideSignupModal} switch={this.setSwitch}/>
+        </Modal>
       </div>
     );
   }
