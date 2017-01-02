@@ -33,6 +33,11 @@
   padding-bottom: 90px;
 }
 
+.post-show {
+  display: flex;
+  padding-bottom: 40px;
+}
+
 .pi-date-col {
   display: flex;
   align-items: center;

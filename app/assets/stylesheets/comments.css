@@ -4,7 +4,9 @@
   align-content: space-between;
   width: 100%;
   color: #4F4F4F;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
+  font-family: futura-pt-light;
+  padding-left: 200px;
 }
 
 .spc-header-row {
@@ -20,21 +22,8 @@
 }
 
 .spc-comments-header {
-  font-family: sans-serif;
-  font-weight: lighter;
-  font-size: 26px;
-}
-
-.spc-header-stars {
-  display: flex;
-  flex-direction: row;
-  margin-left: 10px;
-}
-
-.spc-header-star {
-  margin-right: 3px;
-  width: 20px;
-  height: 20px;
+  font-size: 30px;
+  color: #AAAAAA;
 }
 
 .spc-comment {
@@ -54,12 +43,6 @@
   margin-bottom: 30px;
 }
 
-.spcc-guest-img {
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
-}
-
 .spcc-header-col {
   margin-left: 20px;
   display: flex;
@@ -72,7 +55,6 @@
 
 .spcc-date {
   font-size: 14px;
-  font-family: sans-serif;
   font-weight: lighter;
 }
 
@@ -86,14 +68,38 @@
   height: 42px;
   justify-content: center;
   align-items: center;
-  background-color: #FF5A5F;
+  background-color: #7A939C;
   color: white;
   border-radius: 4px;
   margin-left: 40px;
 }
 
-.spc-add-comment-button:hover {
-  background-color: #FF7E82
+.spc-add-comment-button-live::after {
+  content: "Add a comment";
+}
+
+.spc-hide-button-live {
+  display: flex;
+  width: 185px;
+  height: 42px;
+  justify-content: center;
+  align-items: center;
+  background-color: #7A939C;
+  color: white;
+  border-radius: 4px;
+  margin-left: 40px;
+}
+
+.spc-hide-button-live::after {
+  content: "Hide";
+}
+
+.spc-add-comment-button-live:hover {
+  background-color: #9BBAC4;
+}
+
+.spc-hide-button-live:hover {
+  background-color: #9BBAC4;
 }
 
 .spc-add-comment-button-dead {
@@ -116,34 +122,9 @@
 }
 
 .spc-create-comment-title {
-  font-size: 20px;
+  font-size: 22px;
   margin-bottom: 20px;
-}
-
-.spc-create-rating {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background-color: white;
-  display: flex;
-  font-family: pretty-font;
-  font-size: 16px;
-  height: 64px;
-  padding-left: 20px;
-  color: #484848;
-  border: 1px solid #AAAAAA;
-  width: 470px;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 3px;
-  background-size: 16px 10px;
-  background-repeat: no-repeat;
-  background-position: 97% 50%;
-  background-image: url('https://res.cloudinary.com/dsguwnfdw/image/upload/v1478576077/Icons/Screen_Shot_2016-11-07_at_7.32.28_PM.png');
-  margin-bottom: 23px;
-  -webkit-transition: border .3s;
-  transition: border .3s;
-  resize: none;
+  color: #AAAAAA;
 }
 
 .spc-comment-body {
@@ -172,11 +153,11 @@
   height: 42px;
   justify-content: center;
   align-items: center;
-  background-color: #FF5A5F;
+  background-color: #7A939C;
   color: white;
   border-radius: 4px;
 }
 
 .spc-submit-comment:hover {
-  background-color: #FF7E82
+  background-color: #9BBAC4;
 }

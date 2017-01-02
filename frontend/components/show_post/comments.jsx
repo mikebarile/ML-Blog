@@ -33,7 +33,7 @@ class Comments extends React.Component {
 
   handleAddCommentClick(e) {
     e.preventDefault();
-    this.setState({showCreate: true});
+    this.setState({showCreate: !this.state.showCreate});
   }
 
   handleSubmit(e) {
@@ -51,7 +51,6 @@ class Comments extends React.Component {
       this.setState({
         showCreate: false,
         commentBody: "",
-        rating: null,
         errors: []
       });
     }
@@ -64,8 +63,11 @@ class Comments extends React.Component {
   }
 
   handleWriteAReview() {
-    if (this.props.currentUser) {
+    if (this.props.currentUser && !this.state.showCreate) {
       return "spc-add-comment-button-live";
+    }
+    else if (this.props.currentUser && this.state.showCreate) {
+      return "spc-hide-button-live";
     }
     else {
       return "spc-add-comment-button-dead";
@@ -73,29 +75,20 @@ class Comments extends React.Component {
   }
 
   handleCreateComment() {
-    if (this.state.showCreate === false) {
+    if (this.state.showCreate === false || !this.props.currentUser) {
       return <div></div>;
     }
     return (
       <div className="spc-create-comment">
-        <span className="spc-create-comment-title">Add a comment</span>
         <div className="spc-create_reivew_container">
           <ul className="alf-errors">
             {this.state.errors.map((error, idx) => (
               <span key={idx} className="alf-error">{error}</span>
             ))}
           </ul>
-          <select className="spc-create-rating" onChange={this.update("rating")}>
-              <option defaultValue value="">Please select an option </option>
-              <option value='1'>1 star</option>
-              <option value='2'>2 stars</option>
-              <option value='3'>3 stars</option>
-              <option value='4'>4 stars</option>
-              <option value='5'>5 stars</option>
-            </select>
           <textarea
             ref="bodyField"
-            placeholder="Leave a comment to help other dogowners find a great vacation spot for their pooch!"
+            placeholder="Share your thoughts here!"
             className="spc-comment-body"
             onChange={this.update("commentBody")}>
           </textarea>
@@ -124,7 +117,7 @@ class Comments extends React.Component {
         <div className="sp-first-col">
           <div className="spc-header-row" >
             <span className="spc-comments-header">{this.handleCommentCount(post.count_comments)}</span>
-            <button className={this.handleWriteAReview} onClick={this.handleAddCommentClick}>Write a comment</button>
+            <button className={this.handleWriteAReview()} onClick={this.handleAddCommentClick}></button>
           </div>
           {this.handleCreateComment()}
           {this.handleComments()}

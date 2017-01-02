@@ -65,7 +65,7 @@ class ShowPost extends React.Component {
         </div>
 
         <div className="blog-list">
-          <div className="post-item">
+          <div className="post-show">
             <div className="pi-date-col">
               <span className="pi-day">{day}</span>
               <span className="pi-month">{month}</span>
