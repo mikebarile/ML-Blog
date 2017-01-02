@@ -18,7 +18,7 @@
   padding-bottom: 20px;
   margin-bottom: 20px;
   border-bottom: 1px solid #C4C4C4;
-  width: 100%;
+  min-width: 500px;
 }
 
 .spc-comments-header {
