@@ -71,7 +71,6 @@
 .spcc-body {
   min-width: 500px;
   font-size: 21px;
-  margin-bottom: 5px;
 }
 
 .spcc-input {
@@ -83,7 +82,7 @@
   padding-right: 10px;
   min-width: 478px;
   height: 100px;
-  margin-bottom: 20px;
+  margin-bottom: 13px;
 }
 
 .spcc-submit {
