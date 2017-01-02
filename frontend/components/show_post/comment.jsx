@@ -18,6 +18,7 @@ class Comment extends React.Component {
     this.textUpdate = this.textUpdate.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleSubmitAppearance = this.handleSubmitAppearance.bind(this);
+    this.renderBody = this.renderBody.bind(this);
   }
 
   handleDate(date) {
@@ -66,25 +67,54 @@ class Comment extends React.Component {
     this.props.deleteComment(this.props.comment.id);
   }
 
-  textUpdate(field) {
+  renderBody() {
+    if (this.state.showEdit) {
+      return (
+        <div>
+          <textarea
+            className="spcc-body spcc-input"
+            onChange={this.textUpdate()}
+            value={this.state.body}>
+          </textarea>
+
+          <button
+            className={this.handleSubmitAppearance()}
+            onClick={this.handleSubmit}>
+            Submit
+          </button>
+        </div>
+      );
+    }
+    else {
+      return this.props.comment.body;
+    }
+  }
+
+  textUpdate() {
     return (e) => {
-      this.setState({[field]: e.target.value});
+      this.setState({body: e.target.value});
     };
   }
 
   handleSubmit() {
-    // if (this.state.title !== "" && this.state.body !== "") {
-    //   this.props.createPost(this.state);
-    //   this.props.router.push('/blog');
-    // }
+    if (this.state.body !== "") {
+      this.props.editComment({
+        id: this.state.id,
+        post_id: this.state.post_id,
+        body: this.state.body
+      });
+      this.setState({
+        showEdit: !this.state.showEdit
+      });
+    }
   }
 
   handleSubmitAppearance() {
-    if (this.state.title !== "" && this.state.body !== "") {
-        return "apf-submit";
+    if (this.state.body !== "") {
+        return "apf-submit spcc-submit";
     }
     else {
-      return "apf-submit-dead";
+      return "apf-submit-dead spcc-submit";
     }
   }
 
@@ -108,7 +138,7 @@ class Comment extends React.Component {
           </div>
         </div>
         <div className="spcc-body">
-          {comment.body}
+          {this.renderBody()}
         </div>
       </div>
     );

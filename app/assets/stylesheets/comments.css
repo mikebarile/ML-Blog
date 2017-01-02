@@ -40,7 +40,7 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .spcc-header-col {
@@ -69,7 +69,29 @@
 }
 
 .spcc-body {
+  min-width: 500px;
   font-size: 21px;
+  margin-bottom: 5px;
+}
+
+.spcc-input {
+  border: 1px solid #DCE0E0;
+  -webkit-transition: border .3s;
+  transition: border .3s;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  min-width: 478px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.spcc-submit {
+  font-size: 17px;
+}
+
+.spcc-input:focus {
+  border: 1px solid #484848;
 }
 
 .spc-add-comment-button-live {

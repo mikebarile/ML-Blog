@@ -13,7 +13,7 @@ class Comments extends React.Component {
     };
     this.handleAddCommentClick = this.handleAddCommentClick.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleWriteAReview = this.handleWriteAReview.bind(this);
+    this.handleAddAComment = this.handleAddAComment.bind(this);
     this.update = this.update.bind(this);
     this.handleCreateComment = this.handleCreateComment.bind(this);
     this.handleComments = this.handleComments.bind(this);
@@ -62,7 +62,7 @@ class Comments extends React.Component {
     };
   }
 
-  handleWriteAReview() {
+  handleAddAComment() {
     if (this.props.currentUser && !this.state.showCreate) {
       return "spc-add-comment-button-live";
     }
@@ -123,7 +123,7 @@ class Comments extends React.Component {
         <div className="sp-first-col">
           <div className="spc-header-row" >
             <span className="spc-comments-header">{this.handleCommentCount(this.props.post.comments.length)}</span>
-            <button className={this.handleWriteAReview()} onClick={this.handleAddCommentClick}></button>
+            <button className={this.handleAddAComment()} onClick={this.handleAddCommentClick}></button>
           </div>
           {this.handleCreateComment()}
           {this.handleComments()}
