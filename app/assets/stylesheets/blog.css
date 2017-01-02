@@ -120,17 +120,17 @@
 
 .pi-crud-text {
   padding-right: 5px;
-  color: #AAAAAA;
+  color: #7A939C;
 }
 
 .pi-button {
   padding-right: 5px;
-  color: #AAAAAA;
+  color: #7A939C;
 }
 
 .pi-button:hover {
   cursor: pointer;
-  color: #CCCCCC;
+  color: #9BBAC4;
 }
 
 .pi-live {

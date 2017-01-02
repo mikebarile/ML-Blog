@@ -49,6 +49,15 @@
   min-width: 500px;
 }
 
+.spcc-buttons-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.spcc-button {
+  font-size: 19px;
+}
+
 .spcc-name {
   font-weight: bolder;
   font-size: 21px;

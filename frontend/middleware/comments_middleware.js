@@ -5,16 +5,16 @@ import { receiveNewComment, receiveEditedComment, removeComment,
 import { createComment, deleteComment, editComment } from '../util/comment_api_util';
 
 export default ({ getState, dispatch }) => next => action => {
-  const receiveNewCommentSuccess = booking => {
-    dispatch(receiveNewComment(booking));
+  const receiveNewCommentSuccess = comment => {
+    dispatch(receiveNewComment(comment));
   };
 
-  const receiveEditedCommentSuccess = booking => {
-    dispatch(receiveEditedComment(booking));
+  const receiveEditedCommentSuccess = comment => {
+    dispatch(receiveEditedComment(comment));
   };
 
-  const removeCommentSuccess = booking => {
-    dispatch(removeComment(booking));
+  const removeCommentSuccess = comment => {
+    dispatch(removeComment(comment));
   };
 
   switch(action.type) {
