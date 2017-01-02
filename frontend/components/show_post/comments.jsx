@@ -2,6 +2,9 @@ import React from 'react';
 import { Link } from 'react-router';
 import { withRouter } from 'react-router';
 import Comment from './comment';
+import Modal from 'boron/FadeModal';
+import SignupForm from '../user_form/user_form_container';
+import LoginForm from '../session_form/session_form_container';
 
 class Comments extends React.Component {
   constructor(props) {
@@ -9,8 +12,17 @@ class Comments extends React.Component {
     this.state = {
       showCreate: false,
       commentBody: "",
-      errors: []
+      errors: [],
+      switch: false
     };
+    this.showLoginModal = this.showLoginModal.bind(this);
+    this.hideLoginModal = this.hideLoginModal.bind(this);
+    this.showSignupModal = this.showSignupModal.bind(this);
+    this.hideSignupModal = this.hideSignupModal.bind(this);
+    this.switchToLogin = this.switchToLogin.bind(this);
+    this.switchToSignup = this.switchToSignup.bind(this);
+    this.setSwitch = this.setSwitch.bind(this);
+
     this.handleAddCommentClick = this.handleAddCommentClick.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleAddAComment = this.handleAddAComment.bind(this);
@@ -33,7 +45,12 @@ class Comments extends React.Component {
 
   handleAddCommentClick(e) {
     e.preventDefault();
-    this.setState({showCreate: !this.state.showCreate});
+    if (this.props.currentUser) {
+      this.setState({showCreate: !this.state.showCreate});
+    }
+    else {
+      this.showLoginModal();
+    }
   }
 
   handleSubmit(e) {
@@ -115,6 +132,42 @@ class Comments extends React.Component {
     return comments;
   }
 
+  showLoginModal() {
+    this.refs.loginModal.show();
+  }
+
+  hideLoginModal() {
+    this.refs.loginModal.hide();
+  }
+
+  showSignupModal() {
+    this.refs.signupModal.show();
+  }
+
+  hideSignupModal() {
+    this.refs.signupModal.hide();
+  }
+
+  switchToLogin() {
+    if (this.state.switch === true){
+      this.setState({switch: false});
+      this.showLoginModal();
+    }
+    this.props.clearErrors();
+  }
+
+  switchToSignup() {
+    if (this.state.switch === true){
+      this.setState({switch: false});
+      this.showSignupModal();
+    }
+    this.props.clearErrors();
+  }
+
+  setSwitch() {
+    this.setState({switch: true});
+  }
+
   render() {
     let post = this.props.post;
     let comments = post.comments;
@@ -124,6 +177,20 @@ class Comments extends React.Component {
           <div className="spc-header-row" >
             <span className="spc-comments-header">{this.handleCommentCount(this.props.post.comments.length)}</span>
             <button className={this.handleAddAComment()} onClick={this.handleAddCommentClick}></button>
+            <Modal
+              className="user-modal"
+              ref="loginModal"
+              keyboard={true}
+              onHide={this.switchToSignup}>
+              <LoginForm hideLoginModal={this.hideLoginModal} switch={this.setSwitch}/>
+            </Modal>
+            <Modal
+              className="user-modal"
+              ref="signupModal"
+              keyboard={true}
+              onHide={this.switchToLogin}>
+              <SignupForm hideSignupModal={this.hideSignupModal} switch={this.setSwitch}/>
+            </Modal>
           </div>
           {this.handleCreateComment()}
           {this.handleComments()}

@@ -4,6 +4,7 @@ import { signup } from '../../actions/session_actions';
 import { fetchPost, deletePost } from '../../actions/post_actions';
 import { createComment, deleteComment, editComment
 } from '../../actions/comment_actions';
+import { clearErrors } from '../../actions/session_actions';
 
 const mapStateToProps = ({session, post}) => ({
   currentUser: session.currentUser,
@@ -16,7 +17,8 @@ const mapDispatchToProps = (dispatch, { location }) => ({
   deletePost: (id) => dispatch(deletePost(id)),
   createComment: (comment) => dispatch(createComment(comment)),
   deleteComment: (id) => dispatch(deleteComment(id)),
-  editComment: (comment) => dispatch(editComment(comment))
+  editComment: (comment) => dispatch(editComment(comment)),
+  clearErrors: () => dispatch(clearErrors())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ShowPost);

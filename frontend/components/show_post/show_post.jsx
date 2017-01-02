@@ -99,6 +99,7 @@ class ShowPost extends React.Component {
           createComment={this.props.createComment}
           editComment={this.props.editComment}
           deleteComment={this.props.deleteComment}
+          clearErrors={this.props.clearErrors}
         />
       </div>
     );

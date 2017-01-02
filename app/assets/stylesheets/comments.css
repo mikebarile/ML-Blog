@@ -135,8 +135,25 @@
   background-color: #9BBAC4;
 }
 
-.spc-add-comment-button-dead {
-  display: none;
+.spc-add-comment-button-dead{
+  display: flex;
+  width: 185px;
+  height: 42px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: #7A939C;
+  color: white;
+  border-radius: 4px;
+  font-size: 17px;
+}
+
+.spc-add-comment-button-dead::after {
+  content: "Login to comment";
+}
+
+.spc-add-comment-button-dead:hover {
+  background-color: #9BBAC4;
 }
 
 .spc-create-comment {
