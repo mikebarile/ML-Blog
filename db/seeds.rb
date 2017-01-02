@@ -157,6 +157,6 @@ Looking forward to connecting soon :)
 
 Cheers,
 Mike
-"})
+", user_id: 3})
 
 Comment.create({body: "I can't wait to see what Magic Leap has in store for 2017 :)", post_id: 6, user_id: 3})
