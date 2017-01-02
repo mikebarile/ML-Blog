@@ -15,8 +15,8 @@
     "url": "git+https://github.com/mikebarile/ML-Blogger.git"
   },
   "engines": {
-    "node": "6.2.1",
-    "npm": "3.9.3"
+    "node": "4.1.1",
+    "npm": "2.1.x"
   },
   "keywords": [],
   "author": "",
