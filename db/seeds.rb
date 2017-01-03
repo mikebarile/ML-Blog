@@ -149,7 +149,7 @@ Post.create({title: "hi magic leap! it's mike", created_at: "2017-01-03", body: 
 
 I can't tell you how excited I am to be interviewing with Magic Leap! Ever since I first learned about your company two years ago, I've been scraping the internet for any news or information I could find about it. I'm really fascinated with the technology you're developing and working at Magic Leap would be a dream come true.
 
-In terms of my background: I have experience across the full web stack. I've built apps using Rails and PostgreSQL on the backend and React, Redux, JQuery, and vanilla JS on the front end. In addition, I also have data analytics engineering experience from my time at Uber where I built several internal tools that are used by thousands of people today. Most importantly, I'm a non-stop learner; my biggest priority in my next role is to learn as much as possible from the best people possible.
+In terms of my background: I have experience across the full web stack. I've built apps using Rails and PostgreSQL on the back end and React, Redux, JQuery, and vanilla JS on the front end. In addition, I also have data analytics engineering experience from my time at Uber where I built several internal tools that are used by thousands of people today. Most importantly, I'm a non-stop learner; my biggest priority in my next role is to learn as much as possible from the best people possible.
 
 I hope you enjoy my web blog app! I'm really excited for your feedback and for next steps.
 
