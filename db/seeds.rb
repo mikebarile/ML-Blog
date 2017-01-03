@@ -145,13 +145,13 @@ Stay tuned – the fun is just beginning.
 
 Rony", user_id: 1})
 
-Post.create({title: "hi magic leap! it's mike", created_at: "2017-01-03", body: "Hi team,
+Post.create({title: "hi magic leap! it's mike", created_at: "2017-01-03", body: "Hi everyone,
 
-I can't tell you how excited I am to be interviewing with Magic Leap! I've been scraping the internet for any scrap of news or information about your company ever since I first heard of it around two years ago. As many of my friends will attest, it's been a dream of mine to work at your company where you're building such interesting and impactful technology. I'm really excited about the opportunity to interview with your for a developer role!
+I can't tell you how excited I am to be interviewing with Magic Leap! Ever since I first learned about your company two years ago, I've been scraping the internet for any news or information I could find about it. I'm really fascinated with the technology you're developing and working at Magic Leap would be a dream come true.
 
-I think I have extremely relevant experience and will be able to immediately contribute to the web team. I have experience accross the entire web stack, including on Rails and PostgreSQL on the backend and React, Redux, JQuery, and vanilla JS on the front end. I also have extensive data analytics engineering experience from my time at Uber where I built several internal tools that are used by thousands of people today. I'm a non-stop learner and my biggest priority in my next role is to learn as much as possible.
+In terms of my background: I have experience across the full web stack. I've built apps using Rails and PostgreSQL on the backend and React, Redux, JQuery, and vanilla JS on the front end. In addition, I also have data analytics engineering experience from my time at Uber where I built several internal tools that are used by thousands of people today. Most importantly, I'm a non-stop learner; my biggest priority in my next role is to learn as much as possible from the best people possible.
 
-I hope you enjoy this clone I built of your web blog app! I'm really excited for your feedback and for next steps.
+I hope you enjoy my web blog app! I'm really excited for your feedback and for next steps.
 
 Looking forward to connecting soon :)
 
