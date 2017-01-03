@@ -97,7 +97,7 @@ Magic Leap Blog is a full-stack web application that closely mirrors Magic Leap'
   ```
 
 ## Future Direction for the Project
-  There are several improvements that could be made to my project. Perhaps the biggest improvement I could make would be to spend time refactoring. There are several major areas where I could DRY up my code including:
+  There are several improvements that I could make to my project. Perhaps the largest improvement would be to spend time refactoring. There are several areas where I could significantly DRY up my code including:
   - Move CSS to SASS
   - Migrate modal JS logic to a utility file
   - General cleanup of unnecessary clutter
